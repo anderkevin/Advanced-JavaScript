@@ -1,11 +1,19 @@
 // Complete the following functions.
 
 const counter = () => {
-  // Return a function that when invoked increments and returns a counter variable.
+  let count = 0;
+  return () => {
+    count++;
+    return count;
+  };
+};
+{
+  const myCounterFunction = counter();
+    // Return a function that when invoked increments and returns a counter variable.
   // Example: const newCounter = counter();
   // newCounter(); // 1
   // newCounter(); // 2
-};
+}
 
 const counterFactory = () => {
   // Return an object that has two methods called `increment` and `decrement`.

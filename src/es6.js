@@ -7,19 +7,24 @@
 //----------------
 // const, =>, default parameters, arrow functions default return statements using ()
 
-var food = 'pineapple';
+//var food = 'pineapple';
+const food = "pineapple'"
 
-var isMyFavoriteFood = function(food) {
-  food = food || 'thousand-year-old egg'; //This sets a default value if `food` is falsey
+//var isMyFavoriteFood = function(food) {
+  //food = food || 'thousand-year-old egg'; //This sets a default value if `food` is falsey
+  //return food === 'thousand-year-old egg';
+//};
+const isMyFavoriteFood = (food) => {
+  food = food || 'thousand-year-old egg';
   return food === 'thousand-year-old egg';
 };
 
-var isThisMyFavorite = isMyFavoriteFood(food);
-
+//var isThisMyFavorite = isMyFavoriteFood(food);
+const isThisMyFavoite = isMyfavoriteFood(food)
 //----------------
 //const, class, template literals, enhanced object literals (foo: foo, -> foo,)
 
-var User = function(options) {
+Class User = function(options) {
   this.username = options.username;
   this.password = options.password;
   this.sayHi = function() {
