@@ -4,6 +4,15 @@
 
 class User {
   constructor(options) {
+    this.username = User.username();
+    this.password = User.password();
+
+    function checkPassword() {
+      if (this.password === '') {
+        return true;
+      }
+      return false;
+    }
     // set a username and password property on the user object that is created
   }
   // create a method on the User class called `checkPassword`
