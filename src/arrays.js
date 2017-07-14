@@ -37,12 +37,21 @@ const reduce = (elements, cb, memo) => {
 };
 
 const find = (elements, cb) => {
+  for (let i = 0; i < elements.length; i++) {
+    if (cb(elements[i])) return elements[i];
+  }
+  return undefined;
   // Look through each value in `elements` and pass each element to `cb`.
   // If `cb` returns `true` then return that element.
   // Return `undefined` if no elements pass the truth test.
 };
 
 const filter = (elements, cb) => {
+  const filteredValues = [];
+  each(elements, (item) => {
+    if (cb(item)) filteredValues.push(item);
+  });
+  return filteredValues;
   // Similar to `find` but you will return an array of all elements that passed the truth test
   // Return an empty array if no elements pass the truth test
 };
